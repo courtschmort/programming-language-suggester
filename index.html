@@ -25,16 +25,37 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Programming Language Suggester</h1>
-        <p class="lead">Are you interested in coding and trying to decide which programming language to learn first? Answer the questions below to find out where you should begin your coding adventure!</p>
+        <p class="lead">Are you interested in coding and trying to decide which programming language to learn first? Play our Would You Rather game to find out!</p>
         <hr class="my-4">
         <p>Click below to learn more at our Resources page.</p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
     </div>
     <div class="container">
-      <h1>Which programming language should you learn first?</h1>
-      <form class="">
-        <button type="button" class="btn btn-primary">Primary</button>
+      <h5>Let's get some background information out of the way, first.</h5>
+      <form class="questions">
+        <div class="row">
+          <div class="col">
+            <input id="first-name" type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input id="last-name" type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="education">What is your highest level of education</label>
+          <select class="form-control" id="education">
+            <option selected="true" disabled="disabled">Select your education level</option>
+            <option>Some High School</option>
+            <option>High School Diploma / GED</option>
+            <option>Some College</option>
+            <option>Associate Degree</option>
+            <option>Bachelor's Degree</option>
+            <option>Master's Degree or Higher</option>
+          </select>
+        </div>
+        <h4>Now, let's learn more about you!</h4>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <div class="output">
 
