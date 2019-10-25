@@ -33,9 +33,13 @@
   </div>
   <div class="container">
     <div class="row">
+
       <div class="col">
-        <h5>First, let's get to know more about you.</h5>
+
         <form id="questions">
+
+          <h5>First, let's get to know more about you.</h5>
+
           <div class="form-group">
             <label for="name">Enter your name</label>
             <input type="text" class="form-control" id="name" placeholder="First Last">
@@ -43,7 +47,7 @@
           <div class="form-group">
             <label for="education">Select your highest level of education</label>
             <select class="form-control" id="education">
-              <option selected="true" disabled="disabled">Select your education level</option>
+              <option selected="true" disabled>Education</option>
               <option>Some High School</option>
               <option>High School Diploma / GED</option>
               <option>Some College</option>
@@ -52,52 +56,50 @@
               <option>Master's Degree or Higher</option>
             </select>
           </div>
-          <h5>Now, let's have some fun!</h5>
+
+          <h5>Now, let's have some fun! Choose one:</h5>
 
           <div class="form-group">
-            <label for="color">Is it black or white?</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="color" value="black">
-              <label class="form-check-label" for="color">
-                Black
+              <input class="form-check-input subject" type="radio" name="subject" value="math" checked>
+              <label class="form-check-label" for="subject">
+                Math
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="color" value="white">
-              <label class="form-check-label" for="color">
-                White
+              <input class="form-check-input subject" type="radio" name="subject" value="art">
+              <label class="form-check-label" for="subject">
+                Art
               </label>
             </div>
           </div>
-
+          <hr class="my-4">
           <div class="form-group">
-            <label for="animal">Do cats rule and dogs drool? Or is it the other way around?</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="animal" value="cats">
-              <label class="form-check-label" for="animal">
-                Cats
+              <input class="form-check-input logic" type="radio" name="logic" value="simple" checked>
+              <label class="form-check-label" for="logic">
+                Simple
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="animal" value="dogs">
-              <label class="form-check-label" for="animal">
-                Dogs
+              <input class="form-check-input logic" type="radio" name="logic" value="complex">
+              <label class="form-check-label" for="logic">
+                Complex
               </label>
             </div>
           </div>
-
+          <hr class="my-4">
           <div class="form-group">
-            <label for="food">You like to eat-eat-eat...</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="food" value="fruits">
-              <label class="form-check-label" for="food">
-                Fruits
+              <input class="form-check-input software" type="radio" name="software" value="android" checked>
+              <label class="form-check-label" for="software">
+                Android
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="food" value="vegetables">
-              <label class="form-check-label" for="food">
-                Vegetables
+              <input class="form-check-input software" type="radio" name="software" value="ios">
+              <label class="form-check-label" for="software">
+                iOS
               </label>
             </div>
           </div>
@@ -107,7 +109,7 @@
       </div>
       <div class="col">
         <div id="output">
-          <h2 class="result">You should learn <span class="language"></span> first!</h2>
+          <h2 class="result">You should learn <span class="language"></span> first.</h2>
           <p>Good luck, <span class="name"></span>!</p>
         </div>
       </div>
