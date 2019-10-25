@@ -8,6 +8,7 @@
 
 This is an application for people interested in coding to decide which language they should learn first. Upon submitting a form, one of the three following languages will be suggested.
 
+* Ruby
 * C#
 * Python
 * Swift

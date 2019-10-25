@@ -6,8 +6,8 @@
 
 $(document).ready(function() {
 
-  $("input:radio").click(function() {
-    
+  $("input:radio[name=fun]").click(function() {
+
     let stop = $("input:radio[name=fun]:checked").val();
     console.log(stop);
 
@@ -20,11 +20,14 @@ $(document).ready(function() {
       $("button").show();
       $("#try-again").hide();
     };
+  });
 
-    let remove = $("input:radio[name=platform]:checked").val();
-    console.log(remove);
+  $("input:radio[name=platform]").click(function() {
 
-    if (remove === "web") {
+    let platformInput = $("input:radio[name=platform]:checked").val();
+    console.log(platformInput);
+
+    if (platformInput === "web") {
       $("#secondary-questions").hide();
     } else {
       $("#secondary-questions").show();
@@ -39,8 +42,10 @@ $(document).ready(function() {
 
     let logicInput = $("input:radio[name=logic]:checked").val();
     let softwareInput = $("input:radio[name=software]:checked").val();
+    let platformInput = $("input:radio[name=platform]:checked").val();
     console.log(logicInput);
     console.log(softwareInput);
+    console.log(platformInput);
 
     if (nameInput != "") {
       $("#output").show();
@@ -49,12 +54,14 @@ $(document).ready(function() {
       alert("Please enter your name.");
     };
 
-    if (logicInput === "complex" && softwareInput === "ios") {
-      $(".language").text("Swift")
-    } else if (logicInput === "complex" && softwareInput === "android") {
-      $(".language").text("C#")
-    } else if (logicInput === "simple") {
+    if (logicInput === "complex" && platformInput === "web") {
+      $(".language").text("Ruby")
+    } else if (logicInput === "simple" && platformInput === "web") {
       $(".language").text("Python")
+    } else if (platformInput === "mobile" && softwareInput === "android") {
+      $(".language").text("C#")
+    } else if (platformInput === "mobile" && softwareInput === "ios") {
+      $(".language").text("Swift")
     } else {
       console.log("Shit.");
     };
