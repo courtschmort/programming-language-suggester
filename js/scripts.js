@@ -55,13 +55,13 @@ $(document).ready(function() {
     };
 
     if (logicInput === "complex" && platformInput === "web") {
-      $(".language").text("Ruby")
+      $(".language").html("<a href='https://www.ruby-lang.org/en/' target='_blank'>" + "Ruby" + "</a>")
     } else if (logicInput === "simple" && platformInput === "web") {
-      $(".language").text("Python")
+      $(".language").html("<a href='https://www.python.org' target='_blank'>" + "Python" + "</a>")
     } else if (platformInput === "mobile" && softwareInput === "android") {
       $(".language").text("C#")
     } else if (platformInput === "mobile" && softwareInput === "ios") {
-      $(".language").text("Swift")
+      $(".language").html("<a href='https://developer.apple.com/swift/' target='_blank'>" + "Swift" + "</a>")
     } else {
       console.log("Shit.");
     };
