@@ -25,10 +25,10 @@
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Programming Language Suggester</h1>
-      <p class="lead">Are you interested in coding and trying to decide which programming language to learn first? You could shuffle through Google, but wouldn't it be much more fun to play a little game to find out which programming language is right for you?</p>
-      <hr class="my-4">
+      <p class="lead">Are you interested in coding and trying to decide which programming language to learn first? Complete the form below to find out which programming language is right for you.</p>
+      <!-- <hr class="my-4">
       <p>Not interested in playing games? Click below to go to Google.</p>
-      <a class="btn btn-primary btn-lg" href="https://www.google.com/" role="button" target="_blank">Take me to Google</a>
+      <a class="btn btn-primary btn-lg" href="https://www.google.com/" role="button" target="_blank">Take me to Google</a> -->
     </div>
   </div>
   <div class="container">
@@ -36,71 +36,71 @@
 
       <div class="col">
 
-        <form id="questions">
-
-          <h5>First, let's get to know more about you.</h5>
+        <form id="prelim-questions">
 
           <div class="form-group">
             <label for="name">Enter your name</label>
             <input type="text" class="form-control" id="name" placeholder="First Last">
           </div>
-          <div class="form-group">
-            <label for="education">Select your highest level of education</label>
-            <select class="form-control" id="education">
-              <option selected="true" disabled>Education</option>
-              <option>Some High School</option>
-              <option>High School Diploma / GED</option>
-              <option>Some College</option>
-              <option>Associate Degree</option>
-              <option>Bachelor's Degree</option>
-              <option>Master's Degree or Higher</option>
-            </select>
-          </div>
-
-          <h5>Now, let's have some fun! Choose one:</h5>
 
           <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input subject" type="radio" name="subject" value="math" checked>
-              <label class="form-check-label" for="subject">
-                Math
-              </label>
+            <label for="name">Do you like having fun?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="fun" value="yes" checked>
+                <label class="form-check-label" for="fun">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="fun" value="no">
+                <label class="form-check-label" for="fun">
+                  No
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="fun" value="idk">
+                <label class="form-check-label" for="fun">
+                  I don't know.
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input subject" type="radio" name="subject" value="art">
-              <label class="form-check-label" for="subject">
-                Art
-              </label>
+
+            <div id="output-reconsider">
+              <h2>You should probably reconsider coding.</h2>
             </div>
-          </div>
-          <hr class="my-4">
-          <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input logic" type="radio" name="logic" value="simple" checked>
-              <label class="form-check-label" for="logic">
-                Simple
-              </label>
+
+          <div id="main-questions">
+            <hr class="my-4">
+            <h6>Choose one:</h6>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="logic" value="simple" checked>
+                <label class="form-check-label" for="logic">
+                  Simple
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="logic" value="complex">
+                <label class="form-check-label" for="logic">
+                  Complex
+                </label>
+              </div>
             </div>
-            <div class="form-check">
-              <input class="form-check-input logic" type="radio" name="logic" value="complex">
-              <label class="form-check-label" for="logic">
-                Complex
-              </label>
-            </div>
-          </div>
-          <hr class="my-4">
-          <div class="form-group">
-            <div class="form-check">
-              <input class="form-check-input software" type="radio" name="software" value="android" checked>
-              <label class="form-check-label" for="software">
-                Android
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input software" type="radio" name="software" value="ios">
-              <label class="form-check-label" for="software">
-                iOS
-              </label>
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="software" value="android" checked>
+                <label class="form-check-label" for="software">
+                  Android
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="software" value="ios">
+                <label class="form-check-label" for="software">
+                  iOS
+                </label>
+              </div>
             </div>
           </div>
 
@@ -109,8 +109,8 @@
       </div>
       <div class="col">
         <div id="output">
-          <h2 class="result">You should learn <span class="language"></span> first.</h2>
-          <p>Good luck, <span class="name"></span>!</p>
+          <h2>You should learn <span class="language"></span> first.</h2>
+          <!-- <p>Good luck, <span class="name"></span>!</p> -->
         </div>
       </div>
     </div>

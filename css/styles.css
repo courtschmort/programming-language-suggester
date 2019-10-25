@@ -1,5 +1,13 @@
+#output-reconsider {
+  display: none;
+}
+
 #output {
   display: none;
+}
+
+.language {
+  color: #007bff;
 }
 
 #footer {
