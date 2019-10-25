@@ -1,4 +1,4 @@
-# Portfolio Landing Page
+# Programming Language Suggester
 
 #### JavaScript and jQuery Independent Project for Epicodus; October 25, 2019
 
