@@ -6,26 +6,36 @@
 
 $(document).ready(function() {
 
-  let nameInput = $("input#name").val();
-
-  $("input:radio[name=fun]").click(function() {
-
+  $("input:radio").click(function() {
+    
     let stop = $("input:radio[name=fun]:checked").val();
+    console.log(stop);
 
     if (stop === "no") {
-      $("#main-questions").hide();
+      $("#primary-questions").hide();
       $("button").hide();
-      $("#output-reconsider").show();
+      $("#try-again").show();
     } else {
-      $("#main-questions").show();
+      $("#primary-questions").show();
       $("button").show();
-      $("#output-reconsider").hide();
-    }
+      $("#try-again").hide();
+    };
 
-});
+    let remove = $("input:radio[name=platform]:checked").val();
+    console.log(remove);
+
+    if (remove === "web") {
+      $("#secondary-questions").hide();
+    } else {
+      $("#secondary-questions").show();
+    };
+
+  });
 
   $("form#questions").submit(function(event) {
     event.preventDefault();
+
+    let nameInput = $("input#name").val();
 
     let logicInput = $("input:radio[name=logic]:checked").val();
     let softwareInput = $("input:radio[name=software]:checked").val();
@@ -39,11 +49,7 @@ $(document).ready(function() {
       alert("Please enter your name.");
     };
 
-    if (personalityInput === "no") {
-      $("other-questions").hide();
-      $(".language").hide();
-      $("output").html("<h2>You should probably reconsider.</h2>");
-    } else if (logicInput === "complex" && softwareInput === "ios") {
+    if (logicInput === "complex" && softwareInput === "ios") {
       $(".language").text("Swift")
     } else if (logicInput === "complex" && softwareInput === "android") {
       $(".language").text("C#")

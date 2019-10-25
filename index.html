@@ -26,9 +26,6 @@
     <div class="container">
       <h1 class="display-4">Programming Language Suggester</h1>
       <p class="lead">Are you interested in coding and trying to decide which programming language to learn first? Complete the form below to find out which programming language is right for you.</p>
-      <!-- <hr class="my-4">
-      <p>Not interested in playing games? Click below to go to Google.</p>
-      <a class="btn btn-primary btn-lg" href="https://www.google.com/" role="button" target="_blank">Take me to Google</a> -->
     </div>
   </div>
   <div class="container">
@@ -36,7 +33,7 @@
 
       <div class="col">
 
-        <form id="prelim-questions">
+        <form id="questions">
 
           <div class="form-group">
             <label for="name">Enter your name</label>
@@ -45,31 +42,31 @@
 
           <div class="form-group">
             <label for="name">Do you like having fun?</label>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="fun" value="yes" checked>
-                <label class="form-check-label" for="fun">
-                  Yes
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="fun" value="no">
-                <label class="form-check-label" for="fun">
-                  No
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="fun" value="idk">
-                <label class="form-check-label" for="fun">
-                  I don't know.
-                </label>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="fun" value="yes" checked>
+              <label class="form-check-label" for="fun">
+                Yes
+              </label>
             </div>
-
-            <div id="output-reconsider">
-              <h2>You should probably reconsider coding.</h2>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="fun" value="no">
+              <label class="form-check-label" for="fun">
+                No
+              </label>
             </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="fun" value="idk">
+              <label class="form-check-label" for="fun">
+                I don't know.
+              </label>
+            </div>
+          </div>
 
-          <div id="main-questions">
+          <div id="try-again">
+            <h2>Everyone likes having fun! Try again.</h2>
+          </div>
+
+          <div id="primary-questions">
             <hr class="my-4">
             <h6>Choose one:</h6>
 
@@ -90,27 +87,46 @@
 
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="software" value="android" checked>
-                <label class="form-check-label" for="software">
-                  Android
+                <input class="form-check-input" type="radio" name="platform" value="mobile" checked>
+                <label class="form-check-label" for="platform">
+                  Mobile
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="software" value="ios">
-                <label class="form-check-label" for="software">
-                  iOS
+                <input class="form-check-input" type="radio" name="platform" value="web">
+                <label class="form-check-label" for="platform">
+                  Web
                 </label>
               </div>
             </div>
+
+            <div id="secondary-questions">
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="software" value="android" checked>
+                  <label class="form-check-label" for="software">
+                    Android
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="software" value="ios">
+                  <label class="form-check-label" for="software">
+                    iOS
+                  </label>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+
       <div class="col">
         <div id="output">
           <h2>You should learn <span class="language"></span> first.</h2>
-          <!-- <p>Good luck, <span class="name"></span>!</p> -->
+          <p>Good luck, <span class="name"></span>!</p>
         </div>
       </div>
     </div>
